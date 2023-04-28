@@ -1,0 +1,44 @@
+.breadcrumbs {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 13px;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        fill: #4E4C4C;
+      }
+
+      &.dark_mode svg {
+        fill: #f2f2f2;
+      }
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    &__text {
+      font-weight: 500;
+      font-size: 14px;
+      color: #4E4C4C;
+    }
+
+    &.dark_mode &__text {
+      color: #f2f2f2;
+    }
+  }
+}

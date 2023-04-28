@@ -1,0 +1,64 @@
+.skeleton {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 96px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 24px;
+
+  @media (max-width: 1330px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 1110px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 820px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 750px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 8px;
+    grid-row-gap: 16px;
+  }
+}
+
+.skeleton__item {
+  background-color: #EBEBEB;
+  overflow: hidden !important;
+  padding: 0;
+  height: 370px;
+  border-radius: 4px;
+
+  @media (max-width: 820px) {
+    height: 360px;
+  }
+
+
+  @media (max-width: 560px) {
+    height: 277px;
+  }
+
+  &.dark_mode {
+    background-color: #2d2d2d;
+  }
+}
+
+.skeleton__item__light {
+  height: 100%;
+  animation-duration: 1.6s;
+  background: linear-gradient(270deg, #ffffff0c 34.78%, #ffffffc2 60.33%, #ffffff0c 84.84%);
+  animation-name: skeleton;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+
+@keyframes skeleton {
+  0% {transform: translateX(-600px)}
+  100% {transform: translateX(700px)}
+}

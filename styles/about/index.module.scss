@@ -1,0 +1,128 @@
+.about {
+  padding-bottom: 80px;
+
+  @media (max-width: 800px) {
+    padding-bottom: 32px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 48px;
+    font-weight: 500;
+    font-size: 36px;
+    color: #2D2D2D;
+
+    @media (max-width: 800px) {
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    &.dark_mode {
+      color: #f2f2f2;
+    }
+  }
+
+  &__inner {
+    padding-top: 143px;
+    position: relative;
+
+    @media (max-width: 800px) {
+      padding-top: 0;
+    }
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 186px;
+    padding: 48px;
+    background-color: #FFFFFF;
+    box-shadow: -1px 4px 30px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+
+    @media (max-width: 800px) {
+      position: initial;
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    @media (max-width: 1100px) {
+      padding: 24px;
+    }
+
+    @media (max-width: 800px) {
+      padding: 0;
+    }
+
+    &.dark_mode {
+      background-color: #2d2d2d;
+
+      @media (max-width: 800px) {
+        background-color: transparent;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 27px;
+      color: #4E4C4C;
+
+      @media (max-width: 800px) {
+        font-size: 16px;
+
+        &:last-child {
+          margin-bottom: 32px;
+        }
+      }
+
+      &:first-child {
+        margin-bottom: 24px;
+      }
+    }
+
+    &.dark_mode p {
+      color: #f2f2f2;
+    }
+  }
+
+  &__img {
+    width: calc(100% - 91px);
+    height: 560px;
+    border-radius: 4px;
+    overflow: hidden;
+
+    @media (max-width: 1100px) {
+      height: 400px;
+    }
+
+    @media (max-width: 800px) {
+      height: 305px;
+      width: 100%;
+    }
+
+    &__top {
+      margin-right: 0;
+      margin-left: auto;
+      margin-bottom: 80px;
+
+      @media (max-width: 800px) {
+        margin-bottom: 32px;
+      }
+
+      @media (max-width: 540px) {
+        height: 237px;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      @media (max-width: 800px) {
+        object-fit: cover;
+      }
+    }
+  }
+}

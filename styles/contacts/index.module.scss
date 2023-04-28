@@ -1,0 +1,154 @@
+.contacts {
+  padding-bottom: 80px;
+
+  @media (max-width: 900px) {
+    padding-bottom: 32px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 48px;
+    font-weight: 500;
+    font-size: 36px;
+    color: #2D2D2D;
+
+    &.dark_mode {
+      color: #f2f2f2;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 37%;
+    grid-column-gap: 109px;
+
+    @media (max-width: 1170px) {
+      grid-column-gap: 40px;
+    }
+
+    @media (max-width: 900px) {
+      display: block;
+    }
+  }
+
+  &__list {
+    align-self: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 24px;
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 27px;
+      color: #4E4C4C;
+
+      span:last-child {
+        display: inline-block;
+        width: 156px;
+        font-weight: 500;
+        color: #2D2D2D;
+      }
+
+      &:first-child {
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      margin-bottom: 32px;
+      padding: 24px 16px;
+    }
+
+    @media (max-width: 560px) {
+      margin-bottom: 32px;
+      padding: 24px 8px;
+    }
+
+    &.dark_mode {
+      background-color: #2d2d2d;
+
+      p {
+        color: #f2f2f2;
+
+        span:last-child {
+          color: #f2f2f2;
+        }
+      }
+    }
+
+    &__title {
+      h3 {
+        margin: 0;
+        font-weight: 400;
+        font-size: 24px;
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #E1E1E1;
+        color: #2D2D2D;
+
+        @media (max-width: 900px) {
+          font-size: 18px;
+        }
+
+        &.dark_mode {
+          color: #f2f2f2;
+        }
+      }
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
+
+      &__mail {
+        padding-left: 26px;
+        position: relative;
+
+        @media (max-width: 560px) {
+          padding-left: 0;
+        }
+
+        svg {
+          position: absolute;
+          top: 1px;
+          left: 10px;
+          stroke: #2d2d2d;
+        }
+      }
+
+      &.dark_mode:last-child &__mail svg {
+        stroke: #f2f2f2;
+      }
+
+      span:first-child {
+        font-size: 18px;
+        line-height: 150.19%;
+        color: #4E4C4C;
+
+        @media (max-width: 560px) {
+          display: block;
+        }
+      }
+
+      span:last-child {
+        font-weight: 500;
+        font-size: 18px;
+        color: #2D2D2D;
+      }
+
+      &.dark_mode span:first-child {
+        color: #999292;
+      }
+
+      &.dark_mode span:last-child {
+        color: #f2f2f2;
+      }
+    }
+  }
+}

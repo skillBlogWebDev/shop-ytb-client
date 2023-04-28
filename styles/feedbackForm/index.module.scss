@@ -1,0 +1,126 @@
+.feedback_form {
+  padding: 24px;
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+
+  @media (max-width: 560px) {
+    padding: 24px 8px;
+  }
+
+  &.dark_mode {
+    background-color: #2d2d2d;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #E1E1E1;
+    color: #2D2D2D;
+
+    @media (max-width: 900px) {
+      font-size: 18px;
+    }
+
+    &.dark_mode {
+      color: #f2f2f2;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    &__label {
+      margin-bottom: 24px;
+      position: relative;
+
+      span {
+        display: block;
+        margin-bottom: 4px;
+        font-size: 14px;
+        color: #4E4C4C;
+      }
+
+      &.dark_mode span {
+        color: #999292;
+      }
+
+      &.dark_mode input {
+        caret-color: #f2f2f2;
+        color: #f2f2f2
+      }
+    }
+
+    &__input {
+      background-color: transparent;
+      border: 1px solid #D5D5D5;
+      border-radius: 4px;
+      padding-left: 12px;
+      height: 40px;
+      width: 100%;
+
+      &::placeholder {
+        font-size: 14px;
+        color: #9E9E9E;
+      }
+    }
+
+    &__textarea {
+      width: 100%;
+      padding: 9px 12px;
+      height: 176px;
+      background-color: transparent;
+      border: 1px solid #D5D5D5;
+      border-radius: 4px;
+      resize: vertical;
+
+      &::placeholder {
+        font-size: 16px;
+        color: #9E9E9E;
+      }
+
+      &.dark_mode {
+        caret-color: #f2f2f2;
+        color: #f2f2f2
+      }
+    }
+
+    &__btn {
+      text-align: end;
+      padding-top: 24px;
+      border-top: 1px solid #E1E1E1;
+
+      @media (max-width: 1170px) {
+        text-align: initial;
+      }
+
+      button {
+        height: 40px;
+        width: 255px;
+        position: relative;
+        padding: 8px 32px;
+        background-color: #1C629E;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 18px;
+        color: #FAFBFC;
+
+        @media (max-width: 1170px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.error_alert {
+  font-size: 12px;
+  color: red !important;
+  position: absolute;
+  left: 10px;
+  bottom: -23px;
+}
